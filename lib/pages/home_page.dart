@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.blue,
       ),
+
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: ListView.builder(
@@ -29,6 +30,17 @@ class HomePage extends StatelessWidget {
               item: CatalogModel.items[index],
             );
           },
+      body: SafeArea(
+        child: Center(
+          child: Container(
+            child: Text(
+              'welcome to this demo App',
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ),
       ),
       drawer: MyDrawer(),
